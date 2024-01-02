@@ -6,6 +6,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
             //        addTwoUsersOnSameContext()
+//        managedObjectAccessOnDifferentContext()
+        
+        let concurrencyNotifications = ConcurrencyNotifications()
+        concurrencyNotifications.notificationInsertFired()
+        
         fetchUsers()
     }
     
@@ -97,6 +102,34 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+        // Rule 2 Managed objects retrieved from a context are bound to the same queue that the context is bound to
+    func managedObjectAccessOnDifferentContext() {
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let mainQueueContext = appDelegate.persistentContainer.viewContext
+        let privateQueueContext = appDelegate.persistentContainer.newBackgroundContext()
+        
+        // Created a user object
+        let user = User(context: mainQueueContext)
+        user.secondName = "Mahendra"
+        user.firstName = "Shriram"
+        
+        // Created a Task Object
+        let task = Task(context: privateQueueContext)
+        task.name = "First Task"
+        
+        user.taks = [task]
+        do {
+            try mainQueueContext.save()
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+    }
+    
+    /*
+     One rule of thumb is that object all their relationship properties must create on the same context in which object was created.
+     */
     
 }
 

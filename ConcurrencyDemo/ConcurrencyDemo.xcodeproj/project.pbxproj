@@ -23,6 +23,7 @@
 		DCC37F792B43FF6D00D1EE2B /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC37F732B43FF6D00D1EE2B /* Task+CoreDataProperties.swift */; };
 		DCC37F7A2B43FF6D00D1EE2B /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC37F742B43FF6D00D1EE2B /* User+CoreDataClass.swift */; };
 		DCC37F7B2B43FF6D00D1EE2B /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC37F752B43FF6D00D1EE2B /* User+CoreDataProperties.swift */; };
+		DCC37F7D2B44232C00D1EE2B /* ConcurrencyNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC37F7C2B44232C00D1EE2B /* ConcurrencyNotifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		DCC37F732B43FF6D00D1EE2B /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		DCC37F742B43FF6D00D1EE2B /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		DCC37F752B43FF6D00D1EE2B /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		DCC37F7C2B44232C00D1EE2B /* ConcurrencyNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyNotifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				DCC37F302B43FCE900D1EE2B /* AppDelegate.swift */,
 				DCC37F322B43FCE900D1EE2B /* SceneDelegate.swift */,
 				DCC37F342B43FCE900D1EE2B /* ViewController.swift */,
+				DCC37F7C2B44232C00D1EE2B /* ConcurrencyNotifications.swift */,
 				DCC37F362B43FCE900D1EE2B /* Main.storyboard */,
 				DCC37F3C2B43FCEB00D1EE2B /* Assets.xcassets */,
 				DCC37F3E2B43FCEB00D1EE2B /* LaunchScreen.storyboard */,
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC37F7D2B44232C00D1EE2B /* ConcurrencyNotifications.swift in Sources */,
 				DCC37F3B2B43FCE900D1EE2B /* ConcurrencyDemo.xcdatamodeld in Sources */,
 				DCC37F762B43FF6D00D1EE2B /* Passport+CoreDataClass.swift in Sources */,
 				DCC37F782B43FF6D00D1EE2B /* Task+CoreDataClass.swift in Sources */,
